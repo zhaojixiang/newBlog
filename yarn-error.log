@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ThinkPad\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;D:\Program Files\Java\jdk-9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\TortoiseSVN\bin;D:\VisualSVN\bin;C:\Program Files\Microsoft\Web Platform Installer\;D:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\IDM Computer Solutions\UltraEdit;D:\CTEX\UserData\miktex\bin;D:\CTEX\MiKTeX\miktex\bin;D:\CTEX\CTeX\ctex\bin;D:\CTEX\CTeX\cct\bin;D:\CTEX\CTeX\ty\bin;D:\CTEX\Ghostscript\gs9.05\bin;D:\CTEX\GSview\gsview;D:\CTEX\WinEdt;C:\Android;C:\Windows\System32;C:\Program Files\nodejs\;C:\Users\ThinkPad\AppData\Local\Android\Sdk\tools;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;D:\赵吉祥常用软件安装位置\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\4.0\bin;C:\Users\ThinkPad\AppData\Local\atom\bin;C:\Python27;C:\Users\ThinkPad\AppData\Local\Android\Sdk\platform-tools;C:\Redis-x64-3.2.100;
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.12.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\ThinkPad\AppData\Local\Yarn\Cache\v4\npm-pify-2.3.0-ed141a6ac043a849ea588498e7dca8b15330e90c\node_modules\pify\index.js' -> 'F:\myBlogs\newBlog\node_modules\eslint-plugin-import\node_modules\pify\index.js'
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "start": "roadhog server",
+      "build": "roadhog build",
+      "lint": "eslint --ext .js src test",
+      "precommit": "npm run lint"
+    },
+    "dependencies": {
+      "dva": "^2.4.1",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0"
+    },
+    "devDependencies": {
+      "babel-plugin-dva-hmr": "^0.3.2",
+      "eslint": "^4.14.0",
+      "eslint-config-umi": "^0.1.1",
+      "eslint-plugin-flowtype": "^2.34.1",
+      "eslint-plugin-import": "^2.6.0",
+      "eslint-plugin-jsx-a11y": "^5.1.1",
+      "eslint-plugin-react": "^7.1.0",
+      "husky": "^0.12.0",
+      "redbox-react": "^1.4.3",
+      "roadhog": "^2.5.0-beta.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

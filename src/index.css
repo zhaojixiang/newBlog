@@ -1,0 +1,6 @@
+@import './assets/style/reset.css';
+
+html, body, :global(#root) {
+  height: 100%;
+}
+
