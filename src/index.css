@@ -1,6 +1,16 @@
 @import './assets/style/reset.css';
 
-html, body, :global(#root) {
-  height: 100%;
+html,
+body,
+:global(#root) {
+    height: 100%;
+    background: #f7f7f4;
 }
 
+.mainBox {
+    background: #f7f7f4;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 6px;
+    box-shadow: 2px 2px 20px #ccc;
+}

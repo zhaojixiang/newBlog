@@ -1,0 +1,54 @@
+.articleOverviewL {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 50px 20px 20px;
+    transition: all .2s;
+
+    border-radius: 6px;
+
+    &:hover {
+        box-shadow: 2px 2px 6px #ccc;
+    }
+
+    .title {
+        padding: 5px;
+        background: #fff;
+        height: 80px;
+        width: 40%;
+        top: 40px;
+        right: 320px;
+        position: absolute;
+        z-index: 1000;
+        box-shadow: 2px 2px 6px #ccc;
+        border-radius: 6px;
+    }
+
+    .left {
+        height: 300px;
+        width: 300px;
+        border: solid 2px #ccc;
+        position: relative;
+        border-radius: 6px;
+
+        img {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            right: 40px;
+            top: -40px;
+            border-radius: 6px;
+
+        }
+    }
+
+    .right {
+        box-shadow: 2px 2px 6px #ccc;
+        width: 40%;
+        padding: 5px;
+        background: #fff;
+        height: 160px;
+        margin: 140px 10% 0;
+        border-radius: 6px;
+    }
+}
