@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'antd'
+import style from './index.less'
 
 export default class MakeAFortune extends Component {
   constructor(props) {
@@ -94,15 +95,17 @@ export default class MakeAFortune extends Component {
   }
   render () {
     return (
-      <div>
-        <Button onClick={this.addMoney}>摇号</Button>
-        <div>{this.state.shuangseqiu.shuangseqiu0}</div>
-        <div>{this.state.shuangseqiu.shuangseqiu1}</div>
-        <div>{this.state.shuangseqiu.shuangseqiu2}</div>
-        <div>{this.state.shuangseqiu.shuangseqiu3}</div>
-        <div>{this.state.shuangseqiu.shuangseqiu4}</div>
-        <div>{this.state.shuangseqiu.shuangseqiu5}</div>
-        <div>{this.state.shuangseqiu.shuangseqiu6}</div>
+      <div className={style.MakeAFortune}>
+        <div className={style.daletou}>
+          <Button onClick={this.addMoney}>摇号</Button>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu0}</div>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu1}</div>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu2}</div>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu3}</div>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu4}</div>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu5}</div>
+          <div className={style.num}>{this.state.shuangseqiu.shuangseqiu6}</div>
+        </div>
       </div>
     )
   }

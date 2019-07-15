@@ -1,16 +1,35 @@
 @import './assets/style/reset.css';
 
+@font-face {
+    font-family: pingfang;
+    src: url('./assets/font/苹方字体.ttf');
+}
+
 html,
 body,
 :global(#root) {
+    color: #686868;
     height: 100%;
     background: #f7f7f4;
+    font-family: pingfang;
 }
 
-.mainBox {
-    background: #f7f7f4;
-    width: 90%;
-    margin: 40px auto;
-    border-radius: 6px;
-    box-shadow: 2px 2px 20px #ccc;
+@media screen and (min-width:767px) {
+    .mainBox {
+        background: #f7f7f4;
+        width: 90%;
+        margin: 40px auto;
+        border-radius: 6px;
+        box-shadow: 2px 2px 20px #ccc;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .mainBox {
+        background: #f7f7f4;
+        width: 98%;
+        margin: 10px auto;
+        border-radius: 6px;
+        box-shadow: 2px 2px 20px #ccc;
+    }
 }

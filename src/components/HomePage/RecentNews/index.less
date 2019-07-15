@@ -1,4 +1,24 @@
-.RecentNews {
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width: 767px) {
+    .RecentNews {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cardBox {
+        width: 30%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .RecentNews {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .cardBox {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
 }

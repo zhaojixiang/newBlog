@@ -9,10 +9,10 @@ export default class ArticleOverviewR extends Component {
           <img src={new2} alt="" />
         </div>
         <div className={style.title}>
-          qwewqeq
+          相思
           </div>
         <div className={style.right}>
-          qwewqe
+          红豆生南国，春来发几枝。愿君多采颉，此物最相思。
         </div>
       </div>
     )

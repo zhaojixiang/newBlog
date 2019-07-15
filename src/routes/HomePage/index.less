@@ -3,32 +3,14 @@
 .container {
     background: @mainBgColor;
     width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
 
     .mainBox {
-
-        // background: @mainBgColor;
-        // width: 90%;
-        // margin: 0 auto;
-        // border-radius: 6px;
-        // box-shadow: 2px 2px 20px @shadowColor;
-
-        .contentBox {
-            width: 90%;
-            margin: 40px auto 0;
-            display: flex;
-            justify-content: space-between;
-        }
-
         .banner {
             position: relative;
 
             :global {
                 .ant-carousel .slick-slide {
                     text-align: center;
-                    height: 30rem;
-                    line-height: 30rem;
                     overflow: hidden;
                 }
 
@@ -43,7 +25,7 @@
                 font-size: 2rem;
                 top: 50%;
                 cursor: pointer;
-                z-index: 1000;
+                z-index: 200;
                 transition: all .2s;
 
                 &:hover {
@@ -60,13 +42,102 @@
             }
         }
 
-        .leftContent {
-            margin-right: 50px;
-
-            .paging {
-                margin-bottom: 40px;
-                text-align: right;
+        .contentBox {
+            .leftContent {
+                .paging {
+                    margin-bottom: 40px;
+                    text-align: right;
+                }
             }
         }
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 767px) {
+    .container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .mainBox {
+            .contentBox {
+                width: 90%;
+                margin: 40px auto 0;
+                display: flex;
+                justify-content: space-between;
+
+                .leftContent {
+                    margin-right: 40px;
+
+                    .articalList {
+
+                        margin-top: 2rem;
+
+                        .articalItem {
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    .paging {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            .banner {
+                :global {
+                    .ant-carousel .slick-slide {
+                        height: 30rem;
+                        line-height: 30rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-top: 0px;
+        padding-bottom: 40px;
+        margin-top: 3rem;
+
+        .mainBox {
+            .contentBox {
+                .leftContent {
+                    margin-right: 0px;
+
+                    .articalList {
+
+                        margin-top: 1rem;
+
+                        .articalItem {
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    .paging {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .rightContent {
+                    display: none;
+                }
+            }
+
+            .banner {
+                :global {
+                    .ant-carousel .slick-slide {
+                        height: 15rem;
+                        line-height: 15rem;
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -2,10 +2,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 50px 20px 20px;
     transition: all .2s;
-    // box-shadow: 2px 2px 6px #ccc;
-
     border-radius: 6px;
 
     &:hover {
@@ -13,42 +10,95 @@
     }
 
     .title {
-        padding: 5px;
         background: #fff;
-        height: 80px;
-        width: 40%;
-        top: 40px;
-        left: 320px;
         position: absolute;
         box-shadow: 2px 2px 6px #ccc;
         border-radius: 6px;
+        font-weight: bold;
+        text-align: right;
     }
 
     .left {
-        height: 300px;
-        width: 300px;
         border: solid 2px #ccc;
         position: relative;
         border-radius: 6px;
 
         img {
-            height: 300px;
-            width: 300px;
             position: absolute;
-            right: -40px;
-            top: -40px;
             border-radius: 6px;
-
         }
     }
 
     .right {
         box-shadow: 2px 2px 6px #ccc;
-        width: 40%;
         padding: 5px;
         background: #fff;
-        height: 160px;
-        margin: 140px 10% 0;
         border-radius: 6px;
+    }
+}
+
+@media screen and (min-width:767px) {
+    .articleOverviewR {
+        padding: 50px 20px 20px;
+
+        .title {
+            padding: 5px;
+
+            height: 80px;
+            width: 40%;
+            top: 40px;
+            left: 320px;
+
+        }
+
+        .left {
+            height: 300px;
+            width: 300px;
+
+            img {
+                height: 300px;
+                width: 300px;
+                right: -40px;
+                top: -40px;
+            }
+        }
+
+        .right {
+            width: 40%;
+            height: 160px;
+            margin: 140px 10% 0;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .articleOverviewR {
+        padding: 2.5rem .5rem 1rem;
+
+        .title {
+            padding: .4rem;
+            height: 2rem;
+            width: 9rem;
+            top: 2rem;
+            left: 12rem;
+        }
+
+        .left {
+            height: 11rem;
+            width: 11rem;
+
+            img {
+                height: 11rem;
+                width: 11rem;
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+
+        .right {
+            width: 8rem;
+            height: 6rem;
+            margin-top: 4rem;
+        }
     }
 }

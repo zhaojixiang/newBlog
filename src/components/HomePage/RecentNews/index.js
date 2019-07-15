@@ -8,30 +8,41 @@ import new3 from '../../../assets/images/new3.jpg'
 const { Meta } = Card;
 
 export default class RecentNews extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      recentNewsData: [{
+        title: "Europe Street beat",
+        description: "www.instagram.com",
+        img: new1
+      },
+      {
+        title: "Europe Street beat",
+        description: "www.instagram.com",
+        img: new2
+      },
+      {
+        title: "Europe Street beat",
+        description: "www.instagram.com",
+        img: new3
+      }
+      ]
+    }
+  }
   render () {
     return (
       <div className={style.RecentNews}>
-        <Card
-          hoverable
-          style={{ width: '30%' }}
-          cover={<img alt="example" src={new1} />}
-        >
-          <Meta title="Europe Street beat" description="www.instagram.com" />
-        </Card>
-        <Card
-          hoverable
-          style={{ width: '30%' }}
-          cover={<img alt="example" src={new2} />}
-        >
-          <Meta title="Europe Street beat" description="www.instagram.com" />
-        </Card>
-        <Card
-          hoverable
-          style={{ width: '30%' }}
-          cover={<img alt="example" src={new3} />}
-        >
-          <Meta title="Europe Street beat" description="www.instagram.com" />
-        </Card>
+        {
+          this.state.recentNewsData.map(item =>
+            <Card
+              className={style.cardBox}
+              hoverable
+              cover={<img alt="example" src={item.img} />}
+            >
+              <Meta title={item.title} description={item.description} />
+            </Card>
+          )
+        }
       </div>
     )
   }

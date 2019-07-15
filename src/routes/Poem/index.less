@@ -1,0 +1,40 @@
+@font-face {
+    font-family: pingfang;
+    src: url('../../assets/font/苹方字体.ttf');
+}
+
+.poem {
+    font-family: pingfang;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #686868;
+    display: flex;
+    justify-content: space-between;
+
+    .itemPoem {
+        text-align: center;
+
+        .title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .author {}
+
+        .content {
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            letter-spacing: 10px;
+            font-weight: bold;
+            flex-wrap: wrap;
+
+            .itemWord {
+                width: 50%;
+                height: 40px;
+            }
+        }
+    }
+}
