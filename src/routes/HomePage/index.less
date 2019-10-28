@@ -1,56 +1,120 @@
 @import '../../assets/style/common.less';
 
 .container {
-    background: @mainBgColor;
-    width: 100%;
+  background: @mainBgColor;
+  // width: 75%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 
-    .mainBox {
-        .banner {
-            position: relative;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+  }
 
-            :global {
-                .ant-carousel .slick-slide {
-                    text-align: center;
-                    overflow: hidden;
-                }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+  }
 
-                .ant-carousel .slick-slide h3 {
-                    color: @fontColor;
-                }
+  &:hover::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 53%, 0.4);
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 53%, 0.1);
+  }
+
+  .mainBox {
+    height: 100%;
+
+    .banner {
+      position: relative;
+      height: 100%;
+
+      :global {
+        .ant-carousel {
+          height: 100%;
+
+          .slick-slide {
+            height: 100%;
+
+            div {
+              height: 100%;
             }
+          }
 
-            .icon {
-                color: @fontColor;
-                position: absolute;
-                font-size: 2rem;
-                top: 50%;
-                cursor: pointer;
-                z-index: 200;
-                transition: all .2s;
+          .slick-slider {
+            height: 100%;
 
-                &:hover {
-                    color: @fontColor;
-                }
+            .slick-list {
+              height: 100%;
+
+              .slick-track {
+                height: 100%;
+              }
             }
+          }
 
-            .left {
-                left: 10%;
-            }
+          .slick-dots {
+            text-align: right;
+            padding: 20px;
 
-            .right {
-                right: 10%;
+            li {
+              button {
+                height: 16px;
+              }
             }
+          }
         }
+      }
 
-        .contentBox {
-            .leftContent {
-                .paging {
-                    margin-bottom: 40px;
-                    text-align: right;
-                }
-            }
+      .icon {
+        color: @fontColor;
+        position: absolute;
+        font-size: 2rem;
+        top: 50%;
+        cursor: pointer;
+        z-index: 200;
+        transition: all .2s;
+
+        &:hover {
+          color: @fontColor;
         }
+      }
+
+      .left {
+        left: 10%;
+      }
+
+      .right {
+        right: 10%;
+      }
+
+      .bannerText {
+        top: 40%;
+        width: 400px;
+        height: 200px !important;
+        text-align: center;
+        color: #fff;
+        font-size: 36px;
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        margin-left: -200px;
+      }
     }
+
+    .contentBox {
+      .leftContent {
+        .paging {
+          margin-bottom: 40px;
+          text-align: right;
+        }
+      }
+    }
+  }
 }
 
 
@@ -58,86 +122,86 @@
 
 
 @media screen and (min-width: 767px) {
-    .container {
-        padding-top: 40px;
-        padding-bottom: 40px;
+  .container {
+    // padding-top: 40px;
+    // padding-bottom: 40px;
 
-        .mainBox {
-            .contentBox {
-                width: 90%;
-                margin: 40px auto 0;
-                display: flex;
-                justify-content: space-between;
+    .mainBox {
+      .contentBox {
+        margin-top: 5rem;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
 
-                .leftContent {
-                    margin-right: 40px;
+        .leftContent {
+          // margin-right: 40px;
 
-                    .articalList {
+          .articalList {
 
-                        margin-top: 2rem;
+            margin-top: 2rem;
 
-                        .articalItem {
-                            margin-bottom: 2rem;
-                        }
-                    }
-
-                    .paging {
-                        margin-bottom: 40px;
-                    }
-                }
+            .articalItem {
+              margin-bottom: 2rem;
             }
+          }
 
-            .banner {
-                :global {
-                    .ant-carousel .slick-slide {
-                        height: 30rem;
-                        line-height: 30rem;
-                    }
-                }
-            }
+          .paging {
+            margin-bottom: 40px;
+          }
         }
+      }
+
+      .banner {
+        :global {
+          .ant-carousel .slick-slide {
+            // height: 30rem;
+            // line-height: 30rem;
+          }
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .container {
-        padding-top: 0px;
-        padding-bottom: 40px;
-        margin-top: 3rem;
+  .container {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    margin-top: 3rem;
 
-        .mainBox {
-            .contentBox {
-                .leftContent {
-                    margin-right: 0px;
+    .mainBox {
+      .contentBox {
+        .leftContent {
+          margin-right: 0px;
 
-                    .articalList {
+          .articalList {
 
-                        margin-top: 1rem;
+            margin-top: 1rem;
 
-                        .articalItem {
-                            margin-bottom: 1rem;
-                        }
-                    }
-
-                    .paging {
-                        margin-bottom: 40px;
-                    }
-                }
-
-                .rightContent {
-                    display: none;
-                }
+            .articalItem {
+              margin-bottom: 1rem;
             }
+          }
 
-            .banner {
-                :global {
-                    .ant-carousel .slick-slide {
-                        height: 15rem;
-                        line-height: 15rem;
-                    }
-                }
-            }
+          .paging {
+            margin-bottom: 40px;
+          }
         }
 
+        .rightContent {
+          display: none;
+        }
+      }
+
+      .banner {
+        :global {
+          .ant-carousel .slick-slide {
+            height: 15rem;
+            line-height: 15rem;
+          }
+        }
+      }
     }
+
+  }
 }

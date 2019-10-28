@@ -1,0 +1,28 @@
+@import '../../../assets//style/common.less';
+
+.blogDetail {
+  height: 100%;
+  overflow: hidden auto;
+  padding: 5rem;
+
+  .contentBox {
+    display: flex;
+    justify-content: space-between;
+
+    .blgImg {
+      max-width: 50%;
+      border-radius: .3rem;
+    }
+
+    .content {
+      width: 48%;
+
+      .title {
+        font-weight: bold;
+        font-size: 20px;
+        color: @fontColor;
+        padding: 0 0 2rem;
+      }
+    }
+  }
+}

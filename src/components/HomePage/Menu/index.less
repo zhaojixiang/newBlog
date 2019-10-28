@@ -1,84 +1,95 @@
-.container {
-    position: fixed;
-    top: 0;
+@import '../../../assets/style/common.less';
+
+.menuBox {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  .container {
+    width: 25%;
     z-index: 201;
 
-
-
     .myName {
-
-        font-size: 1.2rem;
-        text-align: center;
+      font-size: 1.6rem;
+      color: @fontColor;
+      text-align: center;
+      font-weight: bold;
     }
+  }
+
+  .routeBox {
+    width: 75%;
+  }
 }
 
+
 @media screen and (min-width:767px) {
-    .container {
-        width: 90%;
-        margin: 0 auto;
-        background: #d38b05;
+  .container {
+    background: @bgColor;
+    padding: 5rem 0 5rem;
+    height: 100%;
 
-        :global {
-            .ant-menu-horizontal {
-                text-align: center;
-                background: transparent;
-                border-bottom: solid 1px #686868;
-                color: #fff;
-            }
-        }
-
-        .mobileMenu {
-            display: none;
-        }
-
-        .myName {
-            color: #fff;
-
-            .menuZoom {
-                display: none;
-            }
-        }
+    :global {
+      .ant-menu-vertical {
+        text-align: center;
+        background: @bgColor;
+        border-right: none;
+        font-weight: bold;
+      }
     }
+
+    .mobileMenu {
+      display: none;
+    }
+
+    .myName {
+      padding: 0 0 3rem;
+
+      .menuZoom {
+        display: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width:767px) {
-    .container {
-        display: flex;
-        justify-content: space-between;
-        background: #d38b05;
-        width: 98%;
-        padding: .5rem .5rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    background: #d38b05;
+    width: 98%;
+    padding: .5rem .5rem;
 
-        // width: 80%;
-        // margin: 0 auto;
+    // width: 80%;
+    // margin: 0 auto;
 
-        // :global {
-        //     .ant-menu-horizontal {
-        //         text-align: center;
-        //         background: transparent;
-        //         border-bottom: solid 1px #686868;
-        //         color: #686868;
-        //     }
-        // }
-        .myName {
-            // height: 2rem;
-            // line-height: 2rem;
-            color: #fff;
-            margin-bottom: 0;
-        }
-
-        .mobileMenu {
-            .menuZoom {
-                // height: 2rem;
-                // line-height: 2rem;
-                // position: fixed;
-                // right: 1rem;
-                // top: 1rem;
-            }
-        }
-
-        .pcMenu {
-            display: none;
-        }
+    // :global {
+    //     .ant-menu-horizontal {
+    //         text-align: center;
+    //         background: transparent;
+    //         border-bottom: solid 1px #686868;
+    //         color: #686868;
+    //     }
+    // }
+    .myName {
+      // height: 2rem;
+      // line-height: 2rem;
+      color: #fff;
+      margin-bottom: 0;
     }
+
+    .mobileMenu {
+      .menuZoom {
+        // height: 2rem;
+        // line-height: 2rem;
+        // position: fixed;
+        // right: 1rem;
+        // top: 1rem;
+      }
+    }
+
+    .pcMenu {
+      display: none;
+    }
+  }
 }

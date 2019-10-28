@@ -1,6 +1,7 @@
 import dva from 'dva';
+import '../mock/mock'
 import './index.css';
-
+import 'animate.css'
 // 1. Initialize
 const app = dva();
 

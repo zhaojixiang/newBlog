@@ -1,49 +1,45 @@
 import React, { Component } from 'react'
 import { Card } from 'antd';
 import style from './index.less'
-import new1 from '../../../assets/images/new1.jpg'
-import new2 from '../../../assets/images/new2.jpg'
-import new3 from '../../../assets/images/new3.jpg'
 
 const { Meta } = Card;
 
-export default class RecentNews extends Component {
+class RecentNews extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      recentNewsData: [{
-        title: "Europe Street beat",
-        description: "www.instagram.com",
-        img: new1
-      },
-      {
-        title: "Europe Street beat",
-        description: "www.instagram.com",
-        img: new2
-      },
-      {
-        title: "Europe Street beat",
-        description: "www.instagram.com",
-        img: new3
+  }
+  jumpToBlogDetail = (item) => {
+    this.props.history.push({
+      pathname: '/main/blogdetail',
+      state: {
+        ...item
       }
-      ]
-    }
+    })
   }
   render () {
+    const { recentNewsData } = this.props
     return (
       <div className={style.RecentNews}>
-        {
-          this.state.recentNewsData.map(item =>
-            <Card
-              className={style.cardBox}
-              hoverable
-              cover={<img alt="example" src={item.img} />}
-            >
-              <Meta title={item.title} description={item.description} />
-            </Card>
-          )
-        }
-      </div>
+
+        <h1 className={style.recentTitle}>RECENT BLOG</h1>
+        <div className={style.recentList}>
+          {/* // className={`${style.cardBox} animateLeft${index}`} */}
+          {
+            recentNewsData ? recentNewsData.map((item, index) =>
+              <Card
+                onClick={() => this.jumpToBlogDetail(item)}
+                key={index}
+                className={`${style.cardBox} animateLeft`}
+                hoverable
+                cover={<img alt="example" src={item.img} className={style.topimg} />}
+              >
+                <Meta title={item.title} description={item.description} />
+              </Card>
+            ) : null
+          }
+        </div>
+      </div >
     )
   }
 }
+export default RecentNews

@@ -1,24 +1,45 @@
 @media screen and (min-width: 767px) {
-    .RecentNews {
-        display: flex;
-        justify-content: space-between;
+  .RecentNews {
+
+    .recentTitle {
+      font-size: 20px;
+      color: #686868;
+      padding: 0 0 2rem;
     }
 
-    .cardBox {
-        width: 30%;
-        margin-bottom: 1rem;
+    .recentList {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .topimg {
+        transition: all 1s;
+        overflow: hidden;
+
+        &:hover {
+          border-radius: 10px;
+          transform: scale(.9);
+        }
+      }
     }
+  }
+
+  .cardBox {
+    width: 23%;
+    height: 30rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .RecentNews {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+  .RecentNews {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 
-        .cardBox {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
+    .cardBox {
+      width: 100%;
+      margin-bottom: 1rem;
     }
+  }
 }
